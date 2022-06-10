@@ -113,18 +113,18 @@ class VerticalStackDialog extends StatelessWidget {
                           child: Row(
                             mainAxisAlignment: MainAxisAlignment.center,
                             children: <Widget>[
-                              if (btnCancel != null)
+                              if (btnOk != null)
                                 Expanded(
-                                  child: btnCancel ?? Container(),
+                                  child: btnOk!,
                                 ),
                               if (btnCancel != null && btnOk != null)
                                 const SizedBox(
                                   width: 10,
                                 ),
-                              if (btnOk != null)
+                              if (btnCancel != null)
                                 Expanded(
-                                  child: btnOk!,
-                                )
+                                  child: btnCancel ?? Container(),
+                                ),
                             ],
                           ),
                         ),
